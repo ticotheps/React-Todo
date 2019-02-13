@@ -5,12 +5,12 @@ import Todo from './components/TodoComponents/Todo';
 
 const todos = [
 	{
-	  task: 'Organize Garage',
+	  task: 'Beat Michael Jordan in H-O-R-S-E',
 	  id: 1528817077286,
 	  completed: false
 	},
 	{
-	  task: 'Bake Cookies',
+	  task: 'Get buckets',
 	  id: 1528817084358,
 	  completed: false
 	}
@@ -36,9 +36,17 @@ class App extends React.Component {
 				</header>
 				{/* <TodoList /> */}  
 				<div className="todo-list">
-					<Todo />
+					{this.state.todos.map(todoFromMap => (
+						<Todo todo={todoFromMap} />
+					))}
 				</div>
-				
+				<form className="todo-form">
+					<input type="text" />
+				</form>
+				<div>
+					<button>Add Todo</button>
+					<button>Clear All</button>
+				</div>
       		</div>
     	);
   	}
