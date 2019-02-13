@@ -13,7 +13,12 @@ const todos = [
 	  task: 'Get buckets',
 	  id: 1528817084358,
 	  completed: false
-	}
+	},
+	{
+		task: 'Teach Lucy how to dribble',
+		id: 1528817084358,
+		completed: false
+	  }
 ];
 
 
@@ -27,6 +32,14 @@ class App extends React.Component {
 			todos: todos,
 		}
 	}
+
+	addTodo = e => {
+		console.log("The Add Todo button was clicked!");
+	};
+
+	clearAll = e => {
+		console.log("The Clear All button was clicked!");
+	};
 
 	render() {
     	return (
@@ -42,11 +55,9 @@ class App extends React.Component {
 				</div>
 				<form className="todo-form">
 					<input type="text" />
+					<button onClick={this.addTodo}>Add Todo</button>
+					<button onClick={this.clearAll}>Clear All</button>
 				</form>
-				<div>
-					<button>Add Todo</button>
-					<button>Clear All</button>
-				</div>
       		</div>
     	);
   	}
