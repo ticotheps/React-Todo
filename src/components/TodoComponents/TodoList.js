@@ -2,6 +2,11 @@
 // feel free to change this component.js into TodoList.js
 
 import React from 'react';
+import TodoForm from './components/TodoComponents/TodoForm';
+
+
+<TodoForm />
+
 
 {/* <div class="TodoList">
     <h2 class="TodoList-heading">Things To Do!</h2>
