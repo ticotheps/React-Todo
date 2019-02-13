@@ -1,4 +1,6 @@
 import React from 'react';
+import TodoList from './components/TodoComponents/TodoList';
+import TodoForm from './components/TodoComponents/TodoForm';
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -7,7 +9,11 @@ class App extends React.Component {
   render() {
     return (
       <div class="App">
-        <h1>Welcome to your Todo App!</h1>
+        <header class="title-container">
+			<h1 class="title">Welcome <br/> to <br/> Git-er-Done!</h1>
+			<TodoList />
+			<TodoForm />
+        </header>  
       </div>
     );
   }
