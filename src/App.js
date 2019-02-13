@@ -30,12 +30,15 @@ class App extends React.Component {
 
 	render() {
     	return (
-      		<div class="App">
-        		<header class="title-container">
-					<h1 class="title">Welcome <br/> to <br/> Git-er-Done!</h1>
+      		<div className="App">
+        		<header className="title-container">
+					<h1 className="title">Welcome <br/> to <br/> Git-er-Done!</h1>
 				</header>
 				{/* <TodoList /> */}  
-				<Todo todo={this.task}/>
+				<div className="todo-list">
+					<Todo />
+				</div>
+				
       		</div>
     	);
   	}
