@@ -103,3 +103,8 @@ body {
     color: blue;
     padding: 10px 0;
 }
+
+.completed {
+    background-color: #d17d7c;
+    text-decoration: line-through;
+  }
