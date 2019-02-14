@@ -56,8 +56,8 @@ class App extends React.Component {
 		});
 	};
 
-	clearAll = e => {
-		console.log("The Clear All button was clicked!");
+	clearCompleted = e => {
+		console.log("The Clear Completed button was clicked!");
 	};
 
 	handleChanges = e => {
@@ -77,7 +77,7 @@ class App extends React.Component {
 				<TodoList todos={this.state.todos} />
 				<TodoForm 
 					addTodo={this.addTodo}
-					clearAll={this.clearAll}
+					clearCompleted={this.clearCompleted}
 					task={this.state.task}
 					id={this.state.id}
 					completed={this.state.completed}
