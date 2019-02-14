@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from './components/TodoComponents/Todo';
+import TodoForm from './components/TodoComponents/TodoForm';
 
 
 const todos = [
@@ -48,7 +49,10 @@ class App extends React.Component {
 		};
 
 		this.setState({
-			todos: [...this.state.todos, newTodo]
+			todos: [...this.state.todos, newTodo],
+			task: "",
+			id: "",
+			completed: ""
 		});
 	};
 
@@ -75,11 +79,14 @@ class App extends React.Component {
 						<Todo key={todoFromMap.id} todo={todoFromMap} />
 					))}
 				</div>
-				<form className="todo-form">
-					<input type="text" value={this.state.task} name="task" onChange={this.handleChanges} />
-					<button onClick={this.addTodo}>Add Todo</button>
-					<button onClick={this.clearAll}>Clear All</button>
-				</form>
+				<TodoForm 
+					addTodo={this.addTodo}
+					clearAll={this.clearAll}
+					task={this.state.task}
+					id={this.state.id}
+					completed={this.state.completed}
+					handleChanges={this.handleChanges}
+				/>
       		</div>
     	);
   	}
