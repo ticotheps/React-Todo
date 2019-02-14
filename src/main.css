@@ -101,5 +101,5 @@ body {
 
 .todo-card {
     color: blue;
-    padding-top: 10px;
+    padding: 10px 0;
 }

@@ -10,7 +10,7 @@ const todos = [
 	  	completed: false
 	},
 	{
-	  	task: 'Get buckets',
+	  	task: 'Shovel the snow',
 	  	id: 1528817084358,
 	  	completed: false
 	},
@@ -72,7 +72,7 @@ class App extends React.Component {
     	return (
       		<div className="App">
         		<header className="title-container">
-					<h1 className="title">Welcome <br/> to <br/> Git-er-Done!</h1>
+					<h1 className="title">Welcome <br/> to the <br/> Git-er-Done <br/> To Do List!</h1>
 				</header> 
 				{/* <div className="todo-list">
 					{this.state.todos.map(todoFromMap => (
