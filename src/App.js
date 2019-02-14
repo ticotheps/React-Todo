@@ -58,6 +58,15 @@ class App extends React.Component {
 
 	clearCompleted = e => {
 		console.log("The Clear Completed button was clicked!");
+
+		e.preventDefault();
+    	this.setState({
+      		// The .filter() function will ONLY return those items that are already 'completed.'
+      		// REMEMBER, the .filter() function takes in one argument and will return a new array of items,
+      		// which will only include those iterated elements (from the original array) that evaluate
+      		// to true when the specified conditions are applied to each.
+      		todos: this.state.todos.filter(todo => !todo.completed)
+    	});
 	};
 
 	handleChanges = e => {
