@@ -96,13 +96,19 @@ body {
     border-radius: 10px;
     border: 2px solid grey;
     margin: 30px 0;
-    padding: 10px 15px;
+    padding: 20px 25px;
+}
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .todo {
     color: blue;
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .todo:hover {
@@ -116,6 +122,28 @@ body {
     text-decoration: line-through;
 }
 
+.user-input, .add-btn, .clear-btn {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
 .user-input {
-    font-size: 20px;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.add-btn, .clear-btn {
+    border-radius: 20px;
+    width: 75%;
+    padding: 7px 0;
+}
+
+.add-btn:hover, .clear-btn:hover {
+    background-color: gray;
+    color: aqua;
+    border: 3px solid aqua;
+    cursor: pointer;
 }
