@@ -74,11 +74,6 @@ class App extends React.Component {
         		<header className="title-container">
 					<h1 className="title">Welcome <br/> to the <br/> Git-er-Done <br/> To Do List!</h1>
 				</header> 
-				{/* <div className="todo-list">
-					{this.state.todos.map(todoFromMap => (
-						<Todo key={todoFromMap.id} todo={todoFromMap} />
-					))}
-				</div> */}
 				<TodoList todos={this.state.todos} />
 				<TodoForm 
 					addTodo={this.addTodo}
