@@ -2,7 +2,7 @@ import React from 'react';
 
 function Todo(props) {
     return (
-        <div className="Todo-card">
+        <div className="todo-card">
             <h3>{props.todo.task}</h3>
         </div>
     );
