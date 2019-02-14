@@ -41,6 +41,10 @@ class App extends React.Component {
 		console.log("The Clear All button was clicked!");
 	};
 
+	handleChanges = e => {
+		console.log(e.target.value);
+	};
+
 	render() {
     	return (
       		<div className="App">
@@ -53,7 +57,7 @@ class App extends React.Component {
 					))}
 				</div>
 				<form className="todo-form">
-					<input type="text" value={this.state.inputValue} />
+					<input type="text" value={this.state.inputValue} onChange={this.handleChanges} />
 					<button onClick={this.addTodo}>Add Todo</button>
 					<button onClick={this.clearAll}>Clear All</button>
 				</form>
