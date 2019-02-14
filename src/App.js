@@ -29,12 +29,25 @@ class App extends React.Component {
 		super();
 		this.state = {
 			todos: todos,
-			inputValue: ""
+			// inputValue: ""
+			task: "",
+			id: Date.now(),
+			completed: ""
 		}
 	}
 
 	addTodo = e => {
 		console.log(this.state.inputValue);
+
+		const newTodo = {
+			task: this.state.task,
+			id: "123",
+			completed: false
+		};
+
+		this.setState({
+			todos: [...this.state.todos, newTodo]
+		});
 	};
 
 	clearAll = e => {
@@ -43,6 +56,10 @@ class App extends React.Component {
 
 	handleChanges = e => {
 		console.log(e.target.value);
+
+		this.setState({
+			[e.target.name]: e.target.value
+		});
 	};
 
 	render() {
@@ -57,7 +74,7 @@ class App extends React.Component {
 					))}
 				</div>
 				<form className="todo-form">
-					<input type="text" value={this.state.inputValue} onChange={this.handleChanges} />
+					<input type="text" value={this.state.task} onChange={this.handleChanges} />
 					<button onClick={this.addTodo}>Add Todo</button>
 					<button onClick={this.clearAll}>Clear All</button>
 				</form>
