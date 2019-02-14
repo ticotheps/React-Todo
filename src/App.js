@@ -27,21 +27,23 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
 	constructor() {
 		super();
+
 		this.state = {
 			todos: todos,
 			// inputValue: ""
 			task: "",
-			id: Date.now(),
+			id: "",
 			completed: ""
 		}
 	}
 
 	addTodo = e => {
+		e.preventDefault();
 		console.log(this.state.inputValue);
 
 		const newTodo = {
 			task: this.state.task,
-			id: "123",
+			id: Date.now(),
 			completed: false
 		};
 
@@ -74,7 +76,7 @@ class App extends React.Component {
 					))}
 				</div>
 				<form className="todo-form">
-					<input type="text" value={this.state.task} onChange={this.handleChanges} />
+					<input type="text" value={this.state.task} name="task" onChange={this.handleChanges} />
 					<button onClick={this.addTodo}>Add Todo</button>
 					<button onClick={this.clearAll}>Clear All</button>
 				</form>
