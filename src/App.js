@@ -1,5 +1,5 @@
 import React from 'react';
-import Todo from './components/TodoComponents/Todo';
+import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
 
@@ -74,11 +74,12 @@ class App extends React.Component {
         		<header className="title-container">
 					<h1 className="title">Welcome <br/> to <br/> Git-er-Done!</h1>
 				</header> 
-				<div className="todo-list">
+				{/* <div className="todo-list">
 					{this.state.todos.map(todoFromMap => (
 						<Todo key={todoFromMap.id} todo={todoFromMap} />
 					))}
-				</div>
+				</div> */}
+				<TodoList todos={this.state.todos} />
 				<TodoForm 
 					addTodo={this.addTodo}
 					clearAll={this.clearAll}
