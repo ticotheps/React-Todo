@@ -1,24 +1,23 @@
 import React from 'react';
 import Todo from './components/TodoComponents/Todo';
-// import TodoList from './components/TodoComponents/TodoList';
 
 
 const todos = [
 	{
-	  task: 'Beat Michael Jordan in H-O-R-S-E',
-	  id: 1528817077286,
-	  completed: false
+	  	task: 'Beat Michael Jordan in H-O-R-S-E',
+	  	id: 1528817077286,
+	  	completed: false
 	},
 	{
-	  task: 'Get buckets',
-	  id: 1528817084358,
-	  completed: false
+	  	task: 'Get buckets',
+	  	id: 1528817084358,
+	  	completed: false
 	},
 	{
 		task: 'Teach Lucy how to dribble',
-		id: 1528817084358,
+		id: 1528817084321,
 		completed: false
-	  }
+	}
 ];
 
 
@@ -30,11 +29,12 @@ class App extends React.Component {
 		super();
 		this.state = {
 			todos: todos,
+			inputValue: ""
 		}
 	}
 
 	addTodo = e => {
-		console.log("The Add Todo button was clicked!");
+		console.log(this.state.inputValue);
 	};
 
 	clearAll = e => {
@@ -46,15 +46,14 @@ class App extends React.Component {
       		<div className="App">
         		<header className="title-container">
 					<h1 className="title">Welcome <br/> to <br/> Git-er-Done!</h1>
-				</header>
-				{/* <TodoList /> */}  
+				</header> 
 				<div className="todo-list">
 					{this.state.todos.map(todoFromMap => (
-						<Todo todo={todoFromMap} />
+						<Todo key={todoFromMap.id} todo={todoFromMap} />
 					))}
 				</div>
 				<form className="todo-form">
-					<input type="text" />
+					<input type="text" value={this.state.inputValue} />
 					<button onClick={this.addTodo}>Add Todo</button>
 					<button onClick={this.clearAll}>Clear All</button>
 				</form>
